@@ -37,11 +37,7 @@ public class RentalService {
 	public TaxService getTaxService() {
 		return taxService;
 	}
-
-	public void setBrazilTaxService(TaxService taxService) {
-		this.taxService = taxService;
-	}
-
+	
 	public void processInvoice(CarRental carRental) {
 		double minutes = Duration.between(carRental.getStart(), carRental.getFinish()).toMinutes();
 		double hour = minutes / 60.0;
